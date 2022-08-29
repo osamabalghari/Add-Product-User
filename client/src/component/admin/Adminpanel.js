@@ -21,7 +21,7 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
 import PeopleIcon from '@mui/icons-material/People';
 import { useNavigate } from 'react-router-dom';
-const drawerWidth = 240;
+const drawerWidth = 540;
 
 const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
@@ -70,8 +70,8 @@ export default function Adminpanel() {
     const products = () => {
         navigate("/products")
     }
-    const addUser = () => {
-        navigate("/adduser")
+    const addAdmin = () => {
+        navigate("/addadmin")
     }
     const signIn = () => {
         navigate("/signin")
@@ -115,7 +115,7 @@ export default function Adminpanel() {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    {['Dashboard', 'Users', 'Products', 'Add User', 'User Sign In'].map((text, index) => (
+                    {['Dashboard', 'Users', 'Products', 'Add Admin', 'User Sign In'].map((text, index) => (
                         <ListItem key={text} disablePadding>
                             <ListItemButton>
                                 <ListItemIcon>
@@ -129,7 +129,7 @@ export default function Adminpanel() {
                                 {index === 0 && < ListItemText primary={text} onClick={dashBoard} />}
                                 {index === 1 && < ListItemText primary={text} onClick={users} />}
                                 {index === 2 && < ListItemText primary={text} onClick={products} />}
-                                {index === 3 && < ListItemText primary={text} onClick={addUser} />}
+                                {index === 3 && < ListItemText primary={text} onClick={addAdmin} />}
                                 {index === 4 && < ListItemText primary={text} onClick={signIn} />}
                             </ListItemButton>
                         </ListItem>

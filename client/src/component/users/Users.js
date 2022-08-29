@@ -35,7 +35,7 @@ const Users = () => {
                     <CardHeader
                         avatar={
                             <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                                {val.name[0]}
+                                {val.name}
                             </Avatar>
                         }
                         action={
